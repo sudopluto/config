@@ -27,6 +27,8 @@ config for my machines, eventully going to script this (hopefullly)
     - acpi_osi=\"!Windows 2015\"
   - nouveau
     - modprobe.blacklist=nouveau
+- nvidia
+  - force full composition pipeline in settings 
 - vim 
   - dracula theme
     - https://github.com/dracula/vim
@@ -59,3 +61,5 @@ config for my machines, eventully going to script this (hopefullly)
     - https://github.com/rbenv/rbenv-installer
   - nvm 
     - https://github.com/creationix/nvm#install-script
+  - gnome mpv
+    - disable client side decorations 
