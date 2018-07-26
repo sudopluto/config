@@ -61,5 +61,5 @@ config for my machines, eventully going to script this (hopefullly)
     - https://github.com/rbenv/rbenv-installer
   - nvm 
     - https://github.com/creationix/nvm#install-script
-  - gnome mpv
-    - disable client side decorations 
+- gnome mpv
+  - disable client side decorations 
