@@ -28,7 +28,10 @@ config for my machines, eventully going to script this (hopefullly)
   - nouveau
     - modprobe.blacklist=nouveau
 - nvidia
-  - force full composition pipeline in settings 
+  - force full composition pipeline
+    - normal: just use nvidia settings
+    - lightdm: startup applications
+      - add: nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
 - vim 
   - dracula theme
     - https://github.com/dracula/vim
