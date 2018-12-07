@@ -2,24 +2,17 @@
 config for my machines, eventully going to script this (hopefullly)
 
 ---
-
-- color themes / look
-  - ubuntu & ubuntu mono everywhere
-  - dracula gnome (shell and gtk)
-    - https://github.com/EliverLara/Ant-Dracula
-  - dracula gnome terminal 
-    - https://github.com/dracula/gnome-terminal
-  - dracula vim
-    - https://github.com/dracula/vim
-  - dracula atom
-    - https://github.com/dracula/atom
-- git 
+- operating system
+  - pop os 18.04
+  - default gnome
+  - default everything (colors, gnome extensions, etc)
+- git credentials 
   - use gnome keyring for credentials
     - sudo apt install libsecret-1-0 libsecret-1-dev
     - cd /usr/share/doc/git/contrib/credential/libsecret
     - sudo make
     - git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-- grub 
+- laptop: nvidia optimus grub tweaks
   - nvidia resolution 
     - GRUB_GFXMODE=1920x1080x32
     - GRUB_GFXPAYLOAD_LINUX=keep
@@ -27,35 +20,18 @@ config for my machines, eventully going to script this (hopefullly)
     - acpi_osi=\"!Windows 2015\"
   - nouveau
     - modprobe.blacklist=nouveau
-- nvidia
+- desktop: nvidia gpu screen tearing fix
   - force full composition pipeline
     - normal: just use nvidia settings
     - lightdm: startup applications
       - add: nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
-- vim 
-  - dracula theme
-    - https://github.com/dracula/vim
-  - vimrc 
-    - syntax on
-    - color dracula
-    - filetype indent plugin on
-- atom 
-  - color profile : sRGB
-  - show invisibles
-  - color and ui theme
-    - dracula 
-  - packages
-    - atom-beautify 
-      - c/c++: sudo apt install clang clang-format
-      - python: pip install autopep8 isort
-    - atom-ide-ui
-    - ide-cpp
-      - sudo apt install clang-tools
-        - clangd path plugin
-    - ide-python
-      - pip install 'python-language-server[all]'
-    - vim mode plus 
-- env
+- (neo)vim 
+    - neovim as daily vim driver
+    - small vimrc, just indentation and syntax highlighting
+    - spacevim as daily driver
+      - c / cpp: lsp plugin with clangd
+        - clang-tools deb -> clangd-6.0 on path
+- prog env
   - pyenv
     - https://github.com/pyenv/pyenv/wiki#suggested-build-environment
     - https://github.com/pyenv/pyenv-installer
