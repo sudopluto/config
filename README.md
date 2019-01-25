@@ -3,9 +3,8 @@ config for my machines, eventully going to script this (hopefullly)
 
 ---
 - operating system
-  - pop os 18.04
-  - default gnome
-  - default everything (colors, gnome extensions, etc)
+  - pop os 18.10
+  - dracula color theme for: firefox, spacevim, gnome terminal, gnome 
 - git credentials 
   - use gnome keyring for credentials
     - sudo apt install libsecret-1-0 libsecret-1-dev
@@ -26,11 +25,10 @@ config for my machines, eventully going to script this (hopefullly)
     - lightdm: startup applications
       - add: nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
 - (neo)vim 
-    - neovim as daily vim driver
-    - small vimrc, just indentation and syntax highlighting
-    - spacevim as daily driver
+    - spacevim as daily driver for
       - c / cpp: lsp plugin with clangd
-        - clang-tools deb -> clangd-6.0 on path
+        - clang-tools deb -> clangd-7 on path
+      - fuzzy finder: denite
 - prog env
   - pyenv
     - https://github.com/pyenv/pyenv/wiki#suggested-build-environment
@@ -40,5 +38,5 @@ config for my machines, eventully going to script this (hopefullly)
     - https://github.com/rbenv/rbenv-installer
   - nvm 
     - https://github.com/creationix/nvm#install-script
-- gnome mpv
-  - disable client side decorations 
+- media
+  - streamlink, mpv
