@@ -40,3 +40,5 @@ config for my machines, eventully going to script this (hopefullly)
     - https://github.com/creationix/nvm#install-script
 - media
   - streamlink, mpv
+- browser:
+  - firefox w/: ublock origin, vim vixen, text constrast, facebook container, dracula dark theme
