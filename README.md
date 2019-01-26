@@ -21,6 +21,7 @@ config for my machines, eventully going to script this (hopefullly)
     - modprobe.blacklist=nouveau
   - ethernet 
     - sudo apt install r8168-dkms
+    - add fix service to systemd
 - desktop: nvidia gpu screen tearing fix
   - force full composition pipeline
     - normal: just use nvidia settings

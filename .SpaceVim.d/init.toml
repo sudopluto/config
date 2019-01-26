@@ -11,7 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    colorscheme = "dracula"
     background = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -37,9 +37,10 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
-#Color Scheme Layer
-[[layers]]
-name = 'colorscheme'
+#Add Dracula Theme
+[[custom_plugins]]
+  name = 'dracula/vim'
+  merged = false
 
 #lsp layer (language server)
 [[layers]]
@@ -49,5 +50,11 @@ filetypes = [
   "cpp"
 ]
   [layers.override_cmd]
-    c = ['clangd-6.0']
-    cpp = ['clangd-6.0']
+    c = ['clangd-7']
+    cpp = ['clangd-7']
+
+
+# add fuzzy finder
+[[layers]]
+name = "denite"
+

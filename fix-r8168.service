@@ -1,0 +1,14 @@
+[Unit]
+Description=Fix RTL-8169 Driver on resume from suspend
+After=suspend.target
+
+[Service]
+User=root
+Type=oneshot
+ExecStartPre=/sbin/modprobe -r r8168
+ExecStart=/sbin/modprobe r8168
+TimeoutSec=0
+StandardOutput=syslog
+
+[Install]
+WantedBy=suspend.target
