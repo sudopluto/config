@@ -19,6 +19,8 @@ config for my machines, eventully going to script this (hopefullly)
     - acpi_osi=\"!Windows 2015\"
   - nouveau
     - modprobe.blacklist=nouveau
+  - ethernet 
+    - sudo apt install r8168-dkms
 - desktop: nvidia gpu screen tearing fix
   - force full composition pipeline
     - normal: just use nvidia settings
