@@ -32,6 +32,9 @@ config for my machines, eventully going to script this (hopefullly)
       - c / cpp: lsp plugin with clangd
         - clang-tools deb -> clangd-7 on path
       - fuzzy finder: denite
+- horipad controller
+  - install steam-devices package
+  - modify the steam controller udev rules (sample in directory)
 - prog env
   - pyenv
     - https://github.com/pyenv/pyenv/wiki#suggested-build-environment
