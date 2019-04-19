@@ -36,6 +36,11 @@ config for my machines, eventully going to script this (hopefullly)
 - horipad controller
   - install steam-devices package
   - modify the steam controller udev rules (sample in directory)
+- gnome
+  - ant-dracula theme
+  - ubuntu dock (may need reinstall after os upgrade)
+  - ubuntu appindicators
+  - user themes & impatice @ 0.6 (in meta extension pkg)
 - prog env
   - pyenv
     - https://github.com/pyenv/pyenv/wiki#suggested-build-environment
