@@ -3,7 +3,7 @@ config for my machines, eventully going to script this (hopefullly)
 
 ---
 - operating system
-  - pop os 18.10
+  - pop os 19.04
   - dracula color theme for: firefox, spacevim, gnome terminal, gnome 
 - git credentials 
   - use gnome keyring for credentials
@@ -30,8 +30,9 @@ config for my machines, eventully going to script this (hopefullly)
 - (neo)vim 
     - spacevim as daily driver for
       - c / cpp: lsp plugin with clangd
-        - clang-tools deb -> clangd-7 on path
+        - clang-tools deb -> clangd on path
       - fuzzy finder: denite
+      - need patched nerd font, see ubuntu mono in current dir
 - horipad controller
   - install steam-devices package
   - modify the steam controller udev rules (sample in directory)

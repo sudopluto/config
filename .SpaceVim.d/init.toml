@@ -50,8 +50,8 @@ filetypes = [
   "cpp"
 ]
   [layers.override_cmd]
-    c = ['clangd-7']
-    cpp = ['clangd-7']
+    c = ['clangd']
+    cpp = ['clangd']
 
 
 # add fuzzy finder
