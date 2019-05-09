@@ -8,3 +8,5 @@ set shiftwidth=4
 set expandtab
 " Change search to be incremental
 set incsearch
+" setting jk to be escape 
+inoremap jk <Esc>
