@@ -27,6 +27,17 @@ config for my machines, eventully going to script this (hopefullly)
     - normal: just use nvidia settings
     - lightdm: startup applications
       - add: nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
+- vscode
+  - settings.json
+    - fonts
+    - nvim enabled
+    - jk to escape 
+  - extensions
+    - c/c++ tools
+    - cmake tools
+    - vscode vim 
+    - dracula 
+    - magic racket 
 - (neo)vim 
     - spacevim as daily driver for
       - c / cpp: lsp plugin with clangd
@@ -42,14 +53,18 @@ config for my machines, eventully going to script this (hopefullly)
   - ubuntu appindicators
   - user themes & impatice @ 0.6 (in meta extension pkg)
 - prog env
+  - c / c++
+    - gcc
+    - cmake
+    - clangd & clang-format
+    - gdb + cgdb
+    - valgrind
   - pyenv
     - https://github.com/pyenv/pyenv/wiki#suggested-build-environment
     - https://github.com/pyenv/pyenv-installer
   - rbenv
     - https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
     - https://github.com/rbenv/rbenv-installer
-  - nvm 
-    - https://github.com/creationix/nvm#install-script
 - media
   - streamlink, mpv
 - browser:

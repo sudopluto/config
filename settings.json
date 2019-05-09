@@ -1,0 +1,15 @@
+{
+    "editor.fontSize": 20,
+    "editor.fontFamily": "'Ubuntu Mono'",
+    "editor.renderWhitespace": "all",
+    "vim.enableNeovim": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.neovimPath": "/usr/bin/nvim",
+    "workbench.colorTheme": "Dracula",
+    "terminal.integrated.fontSize": 20
+}
