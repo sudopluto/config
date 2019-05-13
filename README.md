@@ -12,6 +12,7 @@ config for my machines, eventully going to script this (hopefullly)
     - sudo make
     - git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 - laptop: nvidia optimus grub tweaks
+  - blacklist psmouse mod to fix touchpad after suspend
   - nvidia resolution 
     - GRUB_GFXMODE=1920x1080x32
     - GRUB_GFXPAYLOAD_LINUX=keep
