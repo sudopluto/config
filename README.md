@@ -74,3 +74,6 @@ config for my machines, eventully going to script this (hopefullly)
   - set to vi mode : set -o vi
   - remap jk to esc : bind '"jk":"\e"'
   - remember to use ctl-r for bash searching
+  - use (jk) v to edit current command in editor
+  - use sudo update-alternatives --config editor
+    - to change default editor
