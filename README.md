@@ -70,3 +70,6 @@ config for my machines, eventully going to script this (hopefullly)
   - streamlink, mpv
 - browser:
   - firefox w/: ublock origin, vim vixen, text constrast, facebook container, dracula dark theme
+- bash:
+  - set to vi mode : set -o vi
+  - remap jk to esc : bind '"jk":"\e"'
