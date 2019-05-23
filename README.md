@@ -73,3 +73,4 @@ config for my machines, eventully going to script this (hopefullly)
 - bash:
   - set to vi mode : set -o vi
   - remap jk to esc : bind '"jk":"\e"'
+  - remember to use ctl-r for bash searching
