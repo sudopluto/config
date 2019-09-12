@@ -5,8 +5,8 @@ After=suspend.target
 [Service]
 User=root
 Type=oneshot
-ExecStartPre=/sbin/modprobe -r r8168
-ExecStart=/sbin/modprobe r8168
+ExecStartPre=/sbin/modprobe -r r8169
+ExecStart=/sbin/modprobe r8169
 TimeoutSec=0
 StandardOutput=syslog
 

@@ -3,77 +3,81 @@ config for my machines, eventully going to script this (hopefullly)
 
 ---
 - operating system
-  - pop os 19.04
-  - dracula color theme for: firefox, spacevim, gnome terminal, gnome 
-- git credentials 
-  - use gnome keyring for credentials
-    - sudo apt install libsecret-1-0 libsecret-1-dev
-    - cd /usr/share/doc/git/contrib/credential/libsecret
-    - sudo make
-    - git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-- laptop: nvidia optimus grub tweaks
-  - blacklist psmouse mod to fix touchpad after suspend
-  - nvidia resolution 
-    - GRUB_GFXMODE=1920x1080x32
-    - GRUB_GFXPAYLOAD_LINUX=keep
-  - skylake fix
-    - acpi_osi=\"!Windows 2015\"
-  - nouveau
-    - modprobe.blacklist=nouveau
-  - ethernet 
-    - sudo apt install r8168-dkms
-    - add fix service to systemd
+    - Fedora 30
+    - default theme for most applications
+
+- laptop: 
+    - grub related fixes
+        - grub location: /etc/default/grub
+        - grub gen cmd: sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+        - hardware:
+            - faulty modules
+                - modprobe.blacklist=nouveau,psmouse
+            - acpi profile
+                - acpi_osi=\"!Windows 2015\"
+    - ethernet 
+        - add fix service to systemd
+    - optimus
+        - nvida drivers: rpmfusion instructions
+        - nvidia-xrun
+            - install from copr and follow directions
+                - blacklist in grub?
+            - add bus id to xorg config
+                - /etc/X11/nvidia-xorg.conf.d
+                    - add 30-nvidia.conf
+                    - or file directly
+                    - BusID "PCI:2:0:0" 
+            - verify that drm is not set in grub
+            - setup the nvida-xrun config file
+                - nvidia-xrun goes in /etc/default/
+            - use script nvidia-gnome.sh to switch once in free tty
+                - make sure logged out of all accounts
+                - switch to free tty
+                - login and run script
+                - when done, logout 
+                - switch back to gdm and login
+            - lspci and glxgears should be as expected
+    - screen tearing
+        - enable intel driver and its tearfree option
+            - add 20-intel.conf to /etc/X11/xorg.conf.d
+    - vaapi
+        - just try to find the same packages from arch wiki in rpmfusion
+        - vainfo and vdpauinfo should just work
+        - vaapi addon from gnome-software?
+    - battery
+        - install tlp
+
 - desktop: nvidia gpu screen tearing fix
   - force full composition pipeline
     - normal: just use nvidia settings
     - lightdm: startup applications
       - add: nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
-- vscode
-  - settings.json
-    - fonts
-    - nvim enabled
-    - jk to escape 
-  - extensions
-    - c/c++ tools
-    - cmake tools
-    - vscode vim 
-    - dracula 
-    - magic racket 
-- (neo)vim 
-    - spacevim as daily driver for
-      - c / cpp: lsp plugin with clangd
-        - clang-tools deb -> clangd on path
-      - fuzzy finder: denite
-      - need patched nerd font, see ubuntu mono in current dir
+
 - horipad controller
-  - install steam-devices package
-  - modify the steam controller udev rules (sample in directory)
-- gnome
-  - ant-dracula theme
-  - ubuntu dock (may need reinstall after os upgrade)
-  - ubuntu appindicators
-  - user themes & impatice @ 0.6 (in meta extension pkg)
-- prog env
-  - c / c++
-    - gcc
-    - cmake
-    - clangd & clang-format
-    - gdb + cgdb
-    - valgrind
-  - pyenv
-    - https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-    - https://github.com/pyenv/pyenv-installer
-  - rbenv
-    - https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
-    - https://github.com/rbenv/rbenv-installer
-- media
-  - streamlink, mpv
-- browser:
-  - firefox w/: ublock origin, vim vixen, text constrast, facebook container, dracula dark theme
+    - append the steam controller udev rules with line in 60-steam-input.rules
+        - located: /lib/udev/rules.d/60-steam-input.rules 
+
 - bash:
-  - set to vi mode : set -o vi
-  - remap jk to esc : bind '"jk":"\e"'
+  - consider adding aliases and vim mode from .bashrc located here
   - remember to use ctl-r for bash searching
   - use (jk) v to edit current command in editor
-  - use sudo update-alternatives --config editor
-    - to change default editor
+
+- vim:
+    - just use the .vimrc located here
+
+- gnome-extensions:
+    - just install from gnome software
+        - maybe considering using repository rather than gnome software?
+    - extenions
+        - dash-to-dock
+        - Kstatusnotifier/appindicator
+
+- vscode
+    - vim extension
+        - jk to escape 
+
+- mpv
+    - maybe use aliases
+    - use the given config
+        - put in ~/.config/mpv
+
