@@ -12,11 +12,13 @@ config for my machines, eventully going to script this (hopefullly)
         - grub gen cmd: sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
         - hardware:
             - faulty modules
-                - modprobe.blacklist=nouveau,psmouse
+                - modprobe.blacklist=nouveau
             - acpi profile
                 - acpi_osi=\"!Windows 2015\"
     - ethernet 
         - add fix service to systemd
+    - touchpad frozen
+        - switch to free tty & switch back
     - optimus
         - nvida drivers: rpmfusion instructions
         - nvidia-xrun
@@ -46,6 +48,9 @@ config for my machines, eventully going to script this (hopefullly)
         - vaapi addon from gnome-software?
     - battery
         - install tlp
+    - hardware
+        - body near power port is weak, support w/ sheet metal
+        - display and wifi cable can get freyed at hing
 
 - desktop: nvidia gpu screen tearing fix
   - force full composition pipeline
