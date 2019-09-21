@@ -28,4 +28,7 @@ config for software
     - maybe use aliases in .bashrc
     - use the given config
     - located: ~/.config/mpv
+    - for intel cpus
+        - libva-utils
+        - libva-intel-driver
 
