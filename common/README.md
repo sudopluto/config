@@ -29,6 +29,6 @@ config for software
     - use the given config
     - located: ~/.config/mpv
     - for intel cpus
-        - libva-utils
-        - libva-intel-driver
+        - install libva-utils (vainfo)
+        - install libva-intel-driver (actual driver)
 
