@@ -3,7 +3,7 @@ config for my machines, eventully going to script this (hopefullly)
 
 ---
 - operating system
-    - Fedora 30
+    - Fedora 31
     - default theme for most applications
 
 - hardware specifics are in their respective folder
