@@ -32,3 +32,5 @@ config for software
         - install libva-utils (vainfo)
         - install libva-intel-driver (actual driver)
 
+- tlp
+    - disable bluetooth on startup
