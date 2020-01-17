@@ -11,6 +11,7 @@ config for software
   - consider adding aliases and vim mode from .bashrc located here
   - remember to use ctl-r for bash searching
   - use (jk) v to edit current command in editor
+  - color theme: dracula
 
 - vim:
     - just use the .vimrc located here
@@ -23,6 +24,7 @@ config for software
     - vim extension
         - jk to escape 
     - located: ~/.config/Code/User/settings.json
+    - color theme: dracula
 
 - mpv
     - maybe use aliases in .bashrc
