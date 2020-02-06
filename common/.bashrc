@@ -1,7 +1,21 @@
-# some quick aliases
-# alias kattis='python3 /home/pranav/.kattis/submit.py'
-# alias weeb='mpv --no-video'
-# alias mpv-dir='ls -rt | mpv --no-video -playlist -'
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
 
 # vim aliases
 alias vim="nvim"
@@ -9,6 +23,12 @@ alias vi="nvim"
 alias vimdiff='nvim -d'
 export EDITOR=nvim
 
-# vim mode for bash
-# set -o vi
-# bind '"jk":"\e"'
+# docker aliases
+alias dc="docker-compose"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# give me the real time
+alias time="/usr/bin/time"
