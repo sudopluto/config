@@ -22,13 +22,3 @@ alias vim="nvim"
 alias vi="nvim"
 alias vimdiff='nvim -d'
 export EDITOR=nvim
-
-# docker aliases
-alias dc="docker-compose"
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# give me the real time
-alias time="/usr/bin/time"
