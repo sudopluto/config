@@ -1,4 +1,6 @@
+" syntax highlighting on
 syntax on
+" auto indent on
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -10,3 +12,5 @@ set expandtab
 set incsearch
 " setting jk to be escape 
 inoremap jk <Esc>
+" enable mouse bc ctl-w hurts sometimes
+set mouse=a
