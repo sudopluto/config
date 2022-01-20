@@ -39,3 +39,7 @@ config for software
 
 - tlp
     - disable bluetooth on startup
+
+- fonts
+    - regular: cantarell (gnome default)
+    - monospace / programming: JetBrainsMono
