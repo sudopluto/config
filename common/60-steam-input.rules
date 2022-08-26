@@ -1,2 +1,0 @@
-# HORIPAD S over USB hidraw
-KERNEL=="hidraw*", ATTRS{idVendor}=="0f0d", ATTRS{idProduct}=="00c1", MODE="0666"

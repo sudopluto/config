@@ -16,9 +16,24 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
 
-# vim aliases
-alias vim="nvim"
+unset rc
+
+# modify some stuff
+alias sudo='sudo '
+alias vim='nvim'
 alias vi="nvim"
 alias vimdiff='nvim -d'
 export EDITOR=nvim
+
+source ~/vulkan/1.3.216.0/setup-env.sh
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - bash)"
